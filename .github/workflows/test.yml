@@ -11,6 +11,7 @@ jobs:
       - name: Lint
         run: npm run lint
   test:
+    needs: [lint] # it is sayint test needs "lint" (above lint) to run
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
